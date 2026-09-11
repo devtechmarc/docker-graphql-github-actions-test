@@ -22,5 +22,11 @@ jobs:
         DOCKER_USER: ${{ secrets.DOCKER_USER}}
         DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD}}
       run: docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
+
+    - name: build docker image
+      run: docker build -t talassayup/docker-graphql-github-actions-devtalles:0.0.1 .
+    
+    - name: push docker image
+      run: docker push talassayup/docker-graphql-github-actions-devtalles:0.0.1 .
 #    - name: Build the Docker image
 #      run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
