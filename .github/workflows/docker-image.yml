@@ -27,6 +27,6 @@ jobs:
       run: docker build -t talassayup/docker-graphql-github-actions-devtalles:0.0.1 .
     
     - name: push docker image
-      run: docker push talassayup/docker-graphql-github-actions-devtalles:0.0.1 .
+      run: docker push talassayup/docker-graphql-github-actions-devtalles:0.0.1
 #    - name: Build the Docker image
 #      run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
